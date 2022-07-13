@@ -1,11 +1,9 @@
 __pycache__/
 .ipynb_checkpoints/
 .idea/
-.env
-.venv
+.env/
+.venv/
 env/
 venv/
 ENV/
 VENV/
-env.bak
-venv.bak
