@@ -26,6 +26,7 @@
 1. Результаты оцениваются по среднему количеству попыток за 1000 повторений.
 2. Необходимо добиться минимального среднего количества попыток. Необходимое
 условие&nbsp;&mdash; алгоритм должен обеспечивать меньше 20 попыток.
+3. Код соответствует стандарту PEP-8
 
 [:arrow_up: Содержание](#содержание)
 
@@ -76,7 +77,8 @@
     python3 -m venv VENV
     source VENV/bin/activate
     pip install -r requirements.txt
-    ./game.py
+    python3 game.py
+    python3 game_score.py
     ```
 
     для Windows:
@@ -86,6 +88,7 @@
     VENV\Scripts\activate
     pip install -r requirements.txt
     python game.py
+    python game_score.py
     ```
 
 4. Рассмотрен вариант без установки NumPy.
