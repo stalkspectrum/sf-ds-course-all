@@ -6,10 +6,8 @@ GUESS_RANGE = [1, 100]
 
 
 def secret_number() -> int:
-    """ Загадывает "секретное" число из диапазона, заданного в
-        глобальной переменной GUESS_RANGE.
-    Возвращает:
-        "Секретное" загаданное целое число
+    """ Возвращает загаданное "секретное" число из диапазона, заданного
+        в глобальной переменной GUESS_RANGE.
     """
     return np.random.randint(GUESS_RANGE[0], GUESS_RANGE[1] + 1)
 
@@ -17,7 +15,7 @@ def secret_number() -> int:
 def game_cycle(secret_num: int, need_print=False) -> int:
     """ Основной игровой цикл. Компьютер отгадывает им же загаданное
         "секретное" число и подсчитывает число попыток. Используется
-        алгоритм бинарного поиска.
+        адаптированный алгоритм бинарного поиска.
     Аргументы:
         secret_num -- "Секретное" загаданное целое число
     Именованные аргументы:
@@ -43,16 +41,16 @@ def game_cycle(secret_num: int, need_print=False) -> int:
                 probe_count += 1
                 if need_print:
                     print(f'Угадали {probe_num + 1}',
-                          f'в диапазоне {first_num}-{last_num}')
+                          f'в интервале {first_num}-{last_num}')
                 break
         else:
             if need_print:
                 print(f'Угадали {probe_num}',
-                      f'в диапазоне {first_num}-{last_num}')
+                      f'в интервале {first_num}-{last_num}')
             break
         if need_print:
             print(f'Угадывали {probe_num},',
-                  f'меняем диапазон на {first_num}-{last_num}')
+                  f'меняем интервал на {first_num}-{last_num}')
 
     if need_print:
         print(f'Загаданное число было: {secret_num}, попыток: {probe_count}')
@@ -61,8 +59,3 @@ def game_cycle(secret_num: int, need_print=False) -> int:
 
 if __name__ == '__main__':
     game_cycle(secret_number(), need_print=True)
-    '''
-    for num_ in range(GUESS_RANGE[0], GUESS_RANGE[1]+1):
-        game_cycle(num_, need_print=True)
-        keypressed = input('Продолжать?')
-    '''
