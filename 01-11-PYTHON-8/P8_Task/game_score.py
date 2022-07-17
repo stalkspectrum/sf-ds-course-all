@@ -10,7 +10,7 @@ def average_score(game_cycles: int=1) -> float:
         угадывания числа в игре из модуля game.py.
     Аргументы:
         game_cycles -- Число вызываемых игровых циклов, по которым
-        производится усреднение (default: 1).
+            производится усреднение (default: 1).
     """
     probes_sum = 0
     for iteration in range(game_cycles):
