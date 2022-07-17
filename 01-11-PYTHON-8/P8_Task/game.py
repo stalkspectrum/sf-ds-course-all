@@ -2,22 +2,17 @@
 
 import numpy as np
 
-GUESS_RANGE = [1, 100]
+GUESS_RANGE = (1, 100)
 
 
-def secret_number() -> int:
-    """ Возвращает загаданное "секретное" число из диапазона, заданного
-        в глобальной переменной GUESS_RANGE.
-    """
-    return np.random.randint(GUESS_RANGE[0], GUESS_RANGE[1] + 1)
-
-
-def game_cycle(secret_num: int, need_print=False) -> int:
+def game_cycle(guess_range: tuple=(1, 10),
+               need_print=False) -> int:
     """ Основной игровой цикл. Компьютер отгадывает им же загаданное
         "секретное" число и подсчитывает число попыток. Используется
         адаптированный алгоритм бинарного поиска.
     Аргументы:
-        secret_num -- "Секретное" загаданное целое число
+        guess_range -- Диапазон типа tuple для загадывания и отгадывания
+            числа (default: (1, 10)).
     Именованные аргументы:
         need_print -- Опционально (полезно при непосредственном запуске
             программы, а не при импорте, как модуля) для наглядности
@@ -27,10 +22,11 @@ def game_cycle(secret_num: int, need_print=False) -> int:
         Общее количество попыток, затраченных на угадывание
         "секретного" числа.
     """
-    first_num = GUESS_RANGE[0]
-    last_num = GUESS_RANGE[1]
+    first_num, last_num = guess_range
+    # Загадываем "секретное" число
+    secret_num = np.random.randint(first_num, last_num + 1)
     probe_count = 0
-    
+
     while True:
         probe_count += 1
         probe_num = (first_num + last_num) // 2
@@ -59,4 +55,4 @@ def game_cycle(secret_num: int, need_print=False) -> int:
 
 
 if __name__ == '__main__':
-    game_cycle(secret_number(), need_print=True)
+    game_cycle(GUESS_RANGE, need_print=True)
