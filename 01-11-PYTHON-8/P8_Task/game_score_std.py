@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-from game_std import GUESS_RANGE, game_cycle
+import game_std as g_
 
 GAME_CYCLES = 1000
 
@@ -14,7 +14,7 @@ def average_score(game_cycles: int=1) -> float:
     """
     probes_sum = 0
     for cycle in range(game_cycles):
-        probes_sum += game_cycle(GUESS_RANGE)
+        probes_sum += g_.game_cycle(g_.GUESS_RANGE)
     return probes_sum / game_cycles
 
 

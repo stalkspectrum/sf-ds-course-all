@@ -72,10 +72,11 @@
 `random.seed()`    
     
 Для угадывания числа в модуле использован адаптированный под задание
-[алгоритм бинарного поиска](https://blog.skillfactory.ru/glossary/binarnyj-poisk/)
-(во избежание зацикливания при загаданном числе&nbsp;&mdash; последнем из
+[алгоритм бинарного поиска](https://blog.skillfactory.ru/glossary/binarnyj-poisk/).
+Во избежание зацикливания при загаданном числе&nbsp;&mdash; последнем из
 **`GUESS_RANGE`**, обрабатывается крайний случай, когда интервал поиска сужается
-до соседних чисел).    
+до соседних чисел и/или загадано последнее число из интервала `GUESS_RANGE`
+(отмечено коментарием в главном цикле функции `game_cycle()`).    
     
 В модуле
 [**`game_score.py`**](https://github.com/stalkspectrum/sf-ds-course-all/blob/master/01-11-PYTHON-8/P8_Task/game_score.py)
