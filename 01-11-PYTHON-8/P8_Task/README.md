@@ -122,7 +122,7 @@
 
     # для ОС Linux:
     source VENV/bin/activate
-    # или для ОС Windiws:
+    # или для ОС Windows:
     VENV\Scripts\activate
 
     pip install -r requirements.txt
