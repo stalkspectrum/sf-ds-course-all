@@ -16,3 +16,5 @@
 Строки, форматированный вывод    
 [3.2. Задачи модуля PYTHON-3](https://github.com/stalkspectrum/sf-ds-course-all/tree/master/00-05-PYTHON-3)&nbsp;&mdash;
 Условные операторы. *Високосный год.*    
+[3.3. Задачи модуля PYTHON-4](https://github.com/stalkspectrum/sf-ds-course-all/tree/master/00-06-PYTHON-4)&nbsp;&mdash;
+Циклы. *Очистка строк от символов, подсчёт букв и слов.*    
