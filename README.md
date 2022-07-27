@@ -14,7 +14,7 @@
 
 [3.1. Задачи модуля PYTHON-1](https://github.com/stalkspectrum/sf-ds-course-all/tree/master/00-03-PYTHON-1)&nbsp;&mdash;
 Строки, форматированный вывод    
-[3.2. Задачи модуля PYTHON-3](https://github.com/stalkspectrum/sf-ds-course-all/tree/master/00-05-PYTHON-3)&nbsp;&mdash;
+[3.2. Задачи модуля PYTHON-3](00-05-PYTHON-3)&nbsp;&mdash;
 Условные операторы. *Високосный год.*    
-[3.3. Задачи модуля PYTHON-4](https://github.com/stalkspectrum/sf-ds-course-all/tree/master/00-06-PYTHON-4)&nbsp;&mdash;
+[3.3. Задачи модуля PYTHON-4](00-06-PYTHON-4)&nbsp;&mdash;
 Циклы. *Очистка строк от символов, подсчёт букв и слов.*    
