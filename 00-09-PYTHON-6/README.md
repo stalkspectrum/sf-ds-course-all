@@ -398,3 +398,69 @@ print(wordcount(sample2))
 ```
 
 ----
+
+#### **Задание 5.8** ####
+
+Дан список пользователей:    
+`users_list = ['admin', 'ivan', 'ivan_ivan']`    
+Написать декоратор, который запрашивает имя пользователя и проверяет, есть ли
+оно в списке пользователей. Если да, то мы можем выполнить следующую нашу
+функцию:
+
+```text
+def get_data_from_database():
+    print("Super secure data from database")
+```
+
+Если пользователя нет в списке, нужно вывести об этом сообщение и пропустить
+выполнение функции `get_data_from_database()`.
+
+```python
+users_list = ['admin', 'ivan', 'ivan_ivan']
+
+def auth_decor(func):
+    def func_decor(*args, **kwargs):
+        uname = input('Enter username: ')
+        if uname in users_list:
+            return func(*args, **kwargs)
+        else:
+            print('Wrong user!')
+    return func_decor
+
+@auth_decor
+def get_data_from_database():
+    print('Super secure data from database')
+
+
+get_data_from_database()
+```
+
+----
+
+#### **Задание на самопроверку** ####
+
+Задана строка `S`, состоящая из малых латинских букв. Требуется узнать длину
+наибольшей подстроки, в которой все буквы одинаковы.    
+Например:
+```text
+    "" -> 0
+    "a" -> 1
+    "abbc" -> 2
+    "adddaabaa" -> 3
+```
+
+```python
+def get_longest_dup(string_in):
+    if len(string_in) <= 1:
+        return len(string_in)
+    longest_dup = 1
+    dup = 1
+    for symbol in range(1, len(string_in)):
+        if string_in[symbol] == string_in[symbol-1]:
+            dup += 1
+            if longest_dup < dup:
+                longest_dup = dup
+        else:
+            dup = 1
+    return longest_dup
+```
