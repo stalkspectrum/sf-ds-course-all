@@ -56,7 +56,7 @@ def reform_data(user_list):
                  'username': [],
                  'age': [],
                  'email': []
-                }
+               }
     for user_tup in user_list:
         for key in user_tup[1]:
             new_dict[key].append(user_tup[1][key])
