@@ -18,6 +18,7 @@
 
 ```python
 from collections import deque
+
 def brackets(line):
     queue = deque()
     for char in line:
@@ -32,3 +33,48 @@ def brackets(line):
         return True
     return False
 ```
+
+----
+
+#### **Задание 4.10** ####
+
+Написать функцию `task_manager(tasks)`, которая принимает список задач для
+нескольких серверов. Каждый элемент списка состоит из кортежа (&lt;номер
+задачи&gt;, &lt;название сервера&gt;, &lt;высокий приоритет задачи&gt;).    
+Функция должна создавать словарь и заполнять его задачами по следующему
+принципу: название сервера&nbsp;&mdash; ключ, по которому хранится очередь задач
+для конкретного сервера.    
+Если поступает задача без высокого приоритета (последний элемент кортежа&nbsp;&mdash;
+`False`), добавить номер задачи в конец очереди. Если приоритет высокий,
+добавить номер в начало.    
+Для словаря использовать `defaultdict`, для очереди&nbsp;&mdash; `deque`.
+Функция возвращает полученный словарь с задачами.    
+***Пример***    
+
+```text
+tasks = [(36871, 'office', False),
+(40690, 'office', False),
+(35364, 'voltage', False),
+(41667, 'voltage', True),
+(33850, 'office', False)]
+```
+
+```python
+from collections import defaultdict, deque
+
+def task_manager(tasks):
+    task_dict = defaultdict(deque)
+    for task in tasks:
+        ident, server, urgent = task
+        if urgent:
+            task_dict[server].appendleft(ident)
+        else:
+            task_dict[server].append(ident)
+    return task_dicr
+
+
+print(task_manager(tasks))
+# defaultdict(, {'voltage': deque([41667, 35364]), 'office': deque([36871, 40690, 33850])})
+```
+
+----
