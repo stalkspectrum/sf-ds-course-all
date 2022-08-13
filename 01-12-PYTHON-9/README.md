@@ -38,12 +38,7 @@ print(len(list(cards)))
 #### **Задание 3.2** ####
 
 ```text
-temps = [('2000', -4.4), ('2001', -2.5), ('2002', -4.4), ('2003', -9.5),
-        ('2004', -8.2), ('2005', -1.6), ('2006', -5.9), ('2007', -2.4),
-        ('2008', -1.7), ('2009', -3.5), ('2010', -12.1), ('2011', -5.8),
-        ('2012', -4.9), ('2013', -6.1), ('2014', -6.9), ('2015', -2.7),
-        ('2016', -11.2), ('2017', -3.9), ('2018', -2.9), ('2019', -6.5),
-        ('2020', 1.5)]
+temps = [('2000', -4.4), ('2001', -2.5), ('2002', -4.4), ('2003', -9.5), ('2004', -8.2), ('2005', -1.6), ('2006', -5.9),('2007', -2.4), ('2008', -1.7), ('2009', -3.5), ('2010', -12.1), ('2011', -5.8), ('2012', -4.9), ('2013', -6.1), ('2014', -6.9), ('2015', -2.7), ('2016', -11.2), ('2017', -3.9), ('2018', -2.9), ('2019', -6.5), ('2020', 1.5)]
 ```
 
 Дан список из кортежей `temps`. На первом месте в кортеже указан год в виде
@@ -167,6 +162,7 @@ def flat_list(list_in):
         flatlist.extend(sublist)
     return flatlist
 
+
 print(f'NORTH total = {len(flat_list(north))}')
 print(f'CENTER total = {len(flat_list(center))}')
 print(f'SOUTH total = {len(flat_list(south))}')
@@ -183,6 +179,7 @@ from collections import Counter
 north_cnt = Counter(flat_list(north))
 center_cnt = Counter(flat_list(center))
 south_cnt = Counter(flat_list(south))
+
 print(north_cnt.most_common()[-1])
 ```
 
@@ -241,6 +238,7 @@ from collections import OrderedDict
 ratings.sort()
 ratings.sort(key=lambda x: x[1], reverse=True)
 cafes = OrderedDict(ratings)
+
 print(cafes)
 # OrderedDict([('WokAndRice', 4.9), ('WokToWork', 4.9), ('General Foods', 4.8), ('New Age', 4.6), ('Belissimo', 4.5), ('CakeAndCoffee', 4.2), ('CakeOClock', 4.2), ('CakeTime', 4.1), ('Nice Cakes', 3.9), ('Old Gold', 3.3), ('Old Wine Cellar', 3.3), ('Old York', 3.3)])
 ```
@@ -264,10 +262,10 @@ print(cafes)
 
 ```text
 tasks = [(36871, 'office', False),
-(40690, 'office', False),
-(35364, 'voltage', False),
-(41667, 'voltage', True),
-(33850, 'office', False)]
+         (40690, 'office', False),
+         (35364, 'voltage', False),
+         (41667, 'voltage', True),
+         (33850, 'office', False)]
 ```
 
 ```python
@@ -286,6 +284,235 @@ def task_manager(tasks):
 
 print(task_manager(tasks))
 # defaultdict(, {'voltage': deque([41667, 35364]), 'office': deque([36871, 40690, 33850])})
+```
+
+----
+
+#### **Задания 6.8-12** ####
+
+```text
+import mystery
+print(mystery)
+[[[      inf       inf       inf   6112.         inf       inf       inf]
+  [      inf       inf       inf -51040.         inf       inf       inf]
+  [ -5432.         inf       inf       inf       inf       inf       inf]
+  [      inf       inf       inf       inf  26544.         inf      -inf]
+  [      inf       inf       inf       inf       inf       inf       inf]]
+
+ [[      inf -15896.         inf -34080.         inf       inf       inf]
+  [      inf       inf       inf       inf       inf       inf       inf]
+  [      inf       inf       inf       inf       inf       inf       inf]
+  [      inf       inf       inf       inf       inf       inf       inf]
+  [      inf       inf       inf       inf       inf       inf       inf]]
+
+ [[-27664.         inf       inf       inf       inf       inf  64288.  ]
+  [      inf       inf       inf       inf       inf       inf       inf]
+  [      inf  56704.    44160.         inf       inf       inf  50912.  ]
+  [      inf  30064.         inf       inf      -inf  60384.         inf]
+  [      inf       inf -13000.         inf   3218.   -27904.        -inf]]
+
+ [[      inf       inf    469.75       inf       inf       inf       inf]
+  [  7808.         inf       inf -32832.         inf       inf       inf]
+  [      inf       inf       inf       inf       inf       inf  43680.  ]
+  [      inf       inf       inf       inf       inf       inf       inf]
+  [-51392.         inf  12960.         inf       inf       inf       inf]]
+
+ [[      inf       inf  44992.   -51136.         inf       inf       inf]
+  [      inf       inf       inf       inf       inf       inf       inf]
+  [-56480.         inf  48096.   -13608.         inf       inf -65472.  ]
+  [      inf       inf       inf       inf       inf       inf       inf]
+  [      inf       inf       inf       inf -18272.         inf       inf]]
+
+ [[      inf       inf       inf       inf       inf       inf      -inf]
+  [      inf       inf       inf       inf       inf  26176.         inf]
+  [      inf       inf       inf       inf       inf       inf  24576.  ]
+  [      inf       inf       inf       inf       inf       inf       inf]
+  [      inf       inf       inf       inf      -inf -52640.         inf]]]
+```
+
+Узнать размерность массива `mystery`.
+
+```python
+print(mystery.ndim)
+# 3
+```
+
+Какова максимальная протяжённость по одной из осей массива?
+
+```python
+print(mystery.shape)
+# (6, 5, 7)
+```
+
+Узнать число элементов массива.
+
+```python
+print(mystery.size)
+# 210
+```
+
+Какой тип данных у элементов массива?
+
+```python
+print(mystery.dtype)
+# float16
+```
+
+Узнать вес всех элементов в массиве в байтах.
+
+```python
+print(mystery.itemsize * mystery.size)
+# 420
+```
+
+----
+
+#### **Задания 7.2** ####
+
+```text
+import mystery
+print(mystery)
+[[-13586  15203  28445 -27117  -1781 -17182 -18049]
+ [ 25936 -30968  -1297  -4593   6451  15790   7181]
+ [ 13348  28049  28655  -6012  21762  25397   8225]
+ [ 13240   7994  32592  20149  13754  11795   -564]
+ [-21725  -8681  30305  22260 -17918  12578  29943]
+ [-16841 -25392 -17278  11740   5916    -47 -32037]]
+```
+
+В переменную `elem_5_3` сохранить элемент из 5 строки и 3 столбца:
+
+```python
+elem_5_3 = mystery[4, 2]
+```
+
+В переменную `last` сохранить элемент из последней строки последнего столбца:
+
+```python
+last = mystery[-1, -1]
+```
+
+В переменную `line_4` сохранить строку 4:
+
+```python
+line_4 = mystery[3, :]
+```
+
+В переменную `col_2` сохранить предпоследний столбец:
+
+```python
+col_2 = mystery[:, -2]
+```
+
+Из строк 2-4 (включительно) получить столбцы 3-5 (включительно), результат
+сохранить в переменную `part`:
+
+```python
+part = mystery[1:4, 2:5]
+```
+
+Сохранить в переменную `rev` последний столбец в обратном порядке:
+
+```python
+rev = mystery[::-1, -1]
+```
+
+Сохранить в переменную `trans` транспонированный массив:
+
+```python
+trans = mystery.transpose()
+```
+
+----
+
+#### **Задания 7.4** ####
+
+```text
+import mystery
+print(mystery)
+[ 12279. -26024.  28745.     nan  31244.  -2365.  -6974.  -9212.     nan
+ -17722.  16132.  25933.     nan -16431.  29810.]
+```
+
+Получить булевый массив с информацией о `np.nan` в массиве `mystery`.
+`True`&nbsp;&mdash; значение пропущено, `False`&nbsp;&mdash; значение не
+пропущено.
+
+```python
+nans_index = np.isnan(mystery)
+
+print(nans_index)
+# [False False False  True False False False False  True
+#  False False False  True False False]
+```
+
+В переменную `n_nan` сохранить число пропущенных значений:
+
+```python
+n_nan = sum(np.isnan(mystery))
+
+print(n_nan)
+# 3
+```
+
+Заполнить пропущенные значения в массиве `mystery` нулями:
+
+```python
+mystery[np.isnan(mystery)] = 0
+
+print(mystery)
+# [ 12279. -26024.  28745.      0.  31244.  -2365.  -6974.  -9212.      0.
+#  -17722.  16132.  25933.      0. -16431.  29810.]
+```
+
+Поменять тип данных в массиве `mystery` на `int32`:
+
+```python
+mystery = np.int32(mystery)
+
+print(mystery)
+# [ 12279 -26024  28745      0  31244  -2365  -6974  -9212      0 -17722
+#   16132  25933      0 -16431  29810]
+```
+
+Отсортировать значения в массиве по возрастанию и сохранить результат в
+переменную `array`:
+
+```python
+array = np.sort(mystery)
+
+print(array)
+# [-26024 -17722 -16431  -9212  -6974  -2365      0      0      0  12279
+#   16132  25933  28745  29810  31244]
+```
+
+Сохранить в массив `table` двухмерный массив, полученный из массива `array`. В
+нём должно быть 5 строк и 3 столбца. Причём порядок заполнения должен быть по
+столбцам! Например:
+
+```text
+1, 2, 3, 4 -> 1    3
+              2    4
+```
+
+```python
+table = array.reshape((5, 3), order='F')
+
+print(table)
+# [[-26024  -2365  16132]
+#  [-17722      0  25933]
+#  [-16431      0  28745]
+#  [ -9212      0  29810]
+#  [ -6974  12279  31244]]
+```
+
+Сохранить в переменную `col` средний столбец из `table`:
+
+```python
+col = table[:, 1]
+
+print(col)
+# [-2365     0     0     0 12279]
 ```
 
 ----
