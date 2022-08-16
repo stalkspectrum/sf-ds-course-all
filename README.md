@@ -14,15 +14,16 @@
 
 [3.1. Задачи модуля PYTHON-1](00-03-PYTHON-1)&nbsp;&mdash; Строки,
 форматированный вывод    
-[3.2. Задачи модуля PYTHON-3](00-05-PYTHON-3)&nbsp;&mdash; Условные операторы.
+[3.2. Задачи модуля PYTHON-3](00-05-PYTHON-3)&nbsp;&mdash; Условные операторы
 *(Високосный год)*    
-[3.3. Задачи модуля PYTHON-4](00-06-PYTHON-4)&nbsp;&mdash; Циклы. *(Очистка
+[3.3. Задачи модуля PYTHON-4](00-06-PYTHON-4)&nbsp;&mdash; Циклы *(Очистка
 строк от символов, подсчёт букв и слов)*    
-[3.4. Задачи модуля PYTHON-5.1](00-07-PYTHON-5.1)&nbsp;&mdash; Функции.
+[3.4. Задачи модуля PYTHON-5.1](00-07-PYTHON-5.1)&nbsp;&mdash; Функции
 *(lambda, try/except)*    
-[3.5. Задачи модуля PYTHON-5.2](00-08-PYTHON-5.2)&nbsp;&mdash; Функции.
+[3.5. Задачи модуля PYTHON-5.2](00-08-PYTHON-5.2)&nbsp;&mdash; Функции
 *(Рекурсия, Фибоначчи, Високосный год, Генератор, map/filter, Декоратор)*    
-[3.6. Задачи модуля PYTHON-6](00-09-PYTHON-6)&nbsp;&mdash; Практика.
+[3.6. Задачи модуля PYTHON-6](00-09-PYTHON-6)&nbsp;&mdash; Практика
 *(Подсчёт и сортировка в строках, Тернарный оператор, Фибоначчи, Матрицы)*    
-[3.7. Задачи модуля PYTHON-9](01-12-PYTHON-9)&nbsp;&mdash; NumPy.
+[3.7. Задачи модуля PYTHON-9](01-12-PYTHON-9)&nbsp;&mdash; NumPy
 *(collections.[Counter, defaultdict, OrderedDict, deque], NumPy)*    
+[3.8. Задачи модуля PYTHON-10](01-13-PYTHON-10)&nbsp;&mdash; Pandas    

@@ -603,3 +603,57 @@ print(np.std(mystery))
 ```
 
 ----
+
+#### **Задание 9.6** ####
+
+```text
+import numpy as np
+np.random.seed(2021)
+```
+
+В `simple` сохранить случайное число в диапазоне от 0 до 1:
+
+```python
+simple = np.random.rand()
+```
+
+Сгенерировать 120 чисел в диапазоне от -150 до 2021, сохранить их в переменную
+`randoms`:
+
+```python
+randoms = np.random.uniform(-150, 2021, size=120)
+```
+
+Получить массив из случайных целых чисел от 1 до 100 (включительно) из 3 строк и
+2 столбцов. Сохранить результат в `table`:
+
+```python
+table = np.random.randint(1, 101, size=(3, 2))
+```
+
+В переменную `even` сохранить чётные числа от 2 до 16 (включительно):
+
+```python
+even = np.arange(2, 17, 2)
+```
+
+Перемешать числа в `even` так, чтобы массив `even` изменился:
+
+```python
+np.random.shuffle(even)
+```
+
+Получить из `even` 3 числа без повторений. Сохранить их в переменную `select`:
+
+```python
+select = np.random.choice(even, size=3, replace=False)
+```
+
+Получить переменную `triplet`, которая должна содержать перемешанные значения из
+массива `select` (сам `select` измениться не должен):
+
+```python
+triplet = np.random.permutation(select)
+```
+
+----
