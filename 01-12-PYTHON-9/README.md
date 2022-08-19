@@ -726,3 +726,34 @@ def shuffle_seed(arr):
 ```
 
 ----
+
+#### **Задание 10.8** ####
+
+Написать функцию `min_max_dist`, которая принимает на вход неограниченное число
+векторов через запятую. Гарантируется, что все векторы, которые передаются,
+одинаковой длины.    
+Функция возвращает минимальное и максимальное расстояние между векторами в виде
+кортежа.    
+***Пример:***    
+
+```text
+vec1 = np.array([1,2,3])
+vec2 = np.array([4,5,6])
+vec3 = np.array([7, 8, 9])
+min_max_dist(vec1, vec2, vec3)
+# (5.196152422706632, 10.392304845413264)
+```
+
+```python
+import numpy as np
+
+def min_max_dist(*vectors):
+    distances = []
+    len_vectors = len(vectors)
+    for vec1 in range(len_vectors):
+        for vec2 in range(vec1 + 1, len_vectors):
+            distances.append(np.linalg.norm(vectors[vec1] - vectors[vec2]))
+    return (min(distances), max(distances))
+```
+
+----
