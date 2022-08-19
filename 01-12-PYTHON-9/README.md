@@ -757,3 +757,34 @@ def min_max_dist(*vectors):
 ```
 
 ----
+
+#### **Задание 10.9** ####
+
+Написать функцию `any_normal`, которая принимает на вход неограниченное число
+векторов через запятую. Гарантируется, что все векторы, которые передаются,
+одинаковой длины.
+Функция возвращает `True`, если есть хотя бы одна пара перпендикулярных
+векторов. Иначе возвращает `False`.    
+***Пример:***    
+
+```text
+vec1 = np.array([2, 1])
+vec2 = np.array([-1, 2])
+vec3 = np.array([3,4])
+print(any_normal(vec1, vec2, vec3))
+# True
+```
+
+```python
+import numpy as np
+
+def any_normal(*vectors):
+    len_vectors = len(vectors)
+    for vec1 in range(len_vectors):
+        for vec2 in range(vec1 + 1, len_vectors):
+            if np.dot(vectors[vec1], vectors[vec2]) == 0:
+                return True
+    return False
+```
+
+----
