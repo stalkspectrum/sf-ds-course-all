@@ -30,3 +30,4 @@
 [3.7. Задачи модуля PYTHON-9](01-12-PYTHON-9)&nbsp;&mdash; NumPy
 *(collections.[Counter, defaultdict, OrderedDict, deque], NumPy)*    
 [3.8. Задачи модуля PYTHON-10](01-13-PYTHON-10)&nbsp;&mdash; Pandas    
+[3.9. Задачи модуля PYTHON-11](01-14-PYTHON-11)&nbsp;&mdash; Pandas    
