@@ -29,5 +29,12 @@
 *(Подсчёт и сортировка в строках, Тернарный оператор, Фибоначчи, Матрицы)*    
 [3.7. Задачи модуля PYTHON-9](01-12-PYTHON-9)&nbsp;&mdash; NumPy
 *(collections.[Counter, defaultdict, OrderedDict, deque], NumPy)*    
-[3.8. Задачи модуля PYTHON-10](01-13-PYTHON-10)&nbsp;&mdash; Pandas    
-[3.9. Задачи модуля PYTHON-11](01-14-PYTHON-11)&nbsp;&mdash; Pandas    
+[3.8. Задачи модуля PYTHON-10](01-13-PYTHON-10)&nbsp;&mdash; Pandas *(Series,
+DataFrame)*    
+[3.9. Задачи модуля PYTHON-11](01-14-PYTHON-11)&nbsp;&mdash; Pandas *(datetime,
+apply, category)*    
+[3.10. Задачи модуля PYTHON-12](01-15-PYTHON-12)&nbsp;&mdash; Pandas
+*(sort_values, groupby, pivot_table, concat, join, merge)*    
+[3.11. Задачи модуля PYTHON-13](01-16-PYTHON-13)&nbsp;&mdash; Графические
+возможности Pandas *(plot)*, Matplotlib *(Subplots)*, Seaborn, Plotly *(express,
+choropleth, scatter_3d)*    
