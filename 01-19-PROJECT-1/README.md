@@ -73,9 +73,10 @@
 1. :warning: **GitHub** не позволяет выложить в репозиторий датасет, размер
 которого превышает 25 Мб. Файл с данными весит более 450 Мб. Поэтому для
 воспроизведения работы файла проекта
-**:computer:/:file_folder:/Project-1.ipynb** его надо скачать по ссылке с
+**:computer:/:file_folder:/Project-1.ipynb** его надо скачать [по ссылке на
 [Google Disk](https://drive.google.com/file/d/1ZQ4Q8SnRWJVNICl6GDzOPZfCaRezgT4O/view?usp=sharing)
-и поместить в директорию **:computer:/:file_folder:/data/**.
+и поместить в директорию **:computer:/:file_folder:/data/**. Туда же можно
+поместить скачанный [по ссылке на Google Disk](https://drive.google.com/file/d/1eYtSav-oSzK49fsNbdK6fnIXF96_dDel/view?usp=sharing) файл с выгрузкой курсов валют (также он есть в данном репозитории).
 
 2. GitHub не поддерживает отображение интерактивной визуализации в `Plotly`.
 Графики, построенные с помощью `Plotly`, могут не отображаться на странице
