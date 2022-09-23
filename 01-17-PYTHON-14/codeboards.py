@@ -71,6 +71,8 @@ def outliers_iqr(data, feature):
 от границ ящика (пусть по умолчанию они равны 1.5). Функция, как и раньше,
 должна возвращать потенциальные выбросы и очищенный DataFrame.
 '''
+import pandas as pd
+
 def outliers_iqr_mod(data, feature, left=1.5, right=1.5):
     x = data[feature]
     quartile_1, quartile_3 = x.quantile(0.25), x.quantile(0.75)
@@ -80,3 +82,43 @@ def outliers_iqr_mod(data, feature, left=1.5, right=1.5):
     outliers = data[(x < lower_bound) | (x > upper_bound)]
     cleaned = data[(x > lower_bound) & (x < upper_bound)]
     return outliers, cleaned
+
+
+'''
+Задание 6.3
+Надо расширить правило трёх сигм, чтобы иметь возможность особенности данных.
+
+def outliers_z_score(data, feature, log_scale=False):
+    if log_scale:
+        x = np.log(data[feature] + 1)
+    else:
+        x = data[feature]
+    mu = x.mean()
+    sigma = x.std()
+    lower_bound = mu - 3 * sigma
+    upper_bound = mu + 3 * sigma
+    outliers = data[(x < lower_bound) | (x > upper_bound)]
+    cleaned = data[(x > lower_bound) & (x < upper_bound)]
+    return outliers, cleaned
+
+Добавить в функцию outliers_z_score() параметры left и right, которые будут
+задавать число сигм (стандартных отклонений) влево и вправо соответственно,
+определяющее границы метода z-отклонения. По умолчанию оба параметры равны 3.
+Результирующую функцию назвать outliers_z_score_mod().
+'''
+import pandas as pd
+import numpy as np
+
+def outliers_z_score_mod(data, feature, log_scale=False, left=3, right=3):
+    if log_scale:
+        x = np.log(data[feature] + 1)
+    else:
+        x = data[feature]
+    mu = x.mean()
+    sigma = x.std()
+    lower_bound = mu - left * sigma
+    upper_bound = mu + right * sigma
+    outliers = data[(x < lower_bound) | (x > upper_bound)]
+    cleaned = data[(x > lower_bound) & (x < upper_bound)]
+    return outliers, cleaned
+
