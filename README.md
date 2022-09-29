@@ -39,4 +39,6 @@ apply, category)*
 [3.11. Задачи модуля PYTHON-13](01-16-PYTHON-13)&nbsp;&mdash; Графические
 возможности Pandas *(plot)*, Matplotlib *(Subplots)*, Seaborn, Plotly *(express,
 choropleth, scatter_3d)*    
-[3.12. Задачи модуля PYTHON-14](01-17-PYTHON-14)&nbsp;&mdash; Очистка данных
+[3.12. Задачи модуля PYTHON-14](01-17-PYTHON-14)&nbsp;&mdash; Очистка данных    
+[3.13. Задачи модуля PYTHON-15](01-18-PYTHON-15)&nbsp;&mdash; Классы
+*(try-except-else-finally)*    

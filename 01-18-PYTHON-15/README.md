@@ -1,4 +1,4 @@
-## Задачи из юнитов модуля PYTHON-15 (ООП) ##
+## Задачи из юнитов модуля PYTHON-15 (Принципы ООП в Python) ##
 
 #### **Задание 4.1** ####
 
@@ -99,6 +99,43 @@ user.update_balance(200)
 user.update_balance(-500)
 print(user.balance)
 # 19700
+```
+
+----
+
+#### **Задание 5.2** ####
+
+Определить класс `IntDataFrame`, который принимает список неотрицательных чисел
+и приводит к целым значениям все числа в этом списке. После этого становится
+доступен метод `count`, который считает количество ненулевых элементов, и метод
+`unique`, который возвращает число уникальных элементов.
+
+```python
+class IntDataFrame():
+    def __init__(self, digit_list):
+        self.digit_list = digit_list
+        self.to_int()
+
+    def to_int(self):
+        for dig, val in enumerate(self.digit_list):
+            self.digit_list[dig] = int(self.digit_list[dig])
+
+    def count(self):
+        counter = 0
+        for num in self.digit_list:
+            if num != 0:
+                counter += 1
+        return counter
+
+    def unique(self):
+        return len(set(self.digit_list))
+
+
+df = IntDataFrame([4.7, 4, 3, 0, 2.4, 0.3, 4])
+print(df.count())
+# => 5
+print(df.unique())
+# => 4
 ```
 
 ----
