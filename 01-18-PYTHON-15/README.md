@@ -61,3 +61,44 @@ print(report.average_revenue())
 ```
 
 ----
+
+#### **Задание 5.1** ####
+
+Определить класс для пользователей `User`:
+
+- у него должны быть атрибуты `email`, `password` и `balance`, которые
+устанавливаются при инициализации;
+- у него должен быть метод `login`, который принимает емайл и пароль. Если они
+совпадают с атрибутами объекта, он возвращает `True`, а иначе&nbsp;&mdash;
+`False`;
+- должен быть метод `update_balance(amount)`, который изменяет баланс счёта на
+величину `amount`.
+
+```python
+class User():
+    def __init__(self, email, password, balance):
+        self.email = email
+        self.password = password
+        self.balance = balance
+
+    def login(self, email_, password_):
+        if (email_, password_) == (self.email, self.password):
+            return True
+        return False
+
+    def update_balance(self, amount):
+        self.balance = amount
+
+
+user = User("gosha@roskino.org", "qwerty", 20_000)
+print(user.login("gosha@roskino.org", "qwerty123"))
+# False
+print(user.login("gosha@roskino.org", "qwerty"))
+# True
+user.update_balance(200)
+user.update_balance(-500)
+print(user.balance)
+# 19700
+```
+
+----
