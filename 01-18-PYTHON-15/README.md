@@ -139,3 +139,51 @@ print(df.unique())
 ```
 
 ----
+
+#### **Задание 5.3** ####
+
+Написать класс сборщика технических сообщений `OwnLogger`.
+
+- У него должен быть метод `log(message, level)`, который записывает сообщения.
+Здесь сообщение `message` может быть любым, а `level`&nbsp;&mdash; один из
+`"info"`, `"warning"`, `"error"`.
+- Также применить метод `show_last(level)`, где `level` может быть `"info"`,
+`"warning"`, `"error"`, `"all"`. Для `"all"` он просто возвращает последнее
+добавленное сообщение, а для остальных&nbsp;&mdash; последнее поступившее
+сообщение соответствующего уровня.
+- При этом по умолчанию значение именно `"all"`. Если подходящего сообщения нет,
+возвращает `None`.
+
+```python
+class OwnLogger():
+    def __init__(self):
+        self.log_list = []
+
+    def log(self, message, level):
+        self.log_list.append((message, level))
+
+    def show_last(self, level='all'):
+        for log_tup in self.log_list[-1::-1]:
+            if level == 'all':
+                return log_tup[0]
+            else:
+                if log_tup[1] == level:
+                    return log_tup[0]
+        return None
+
+
+logger = OwnLogger()
+logger.log("System started", "info")
+print(logger.show_last("error"))
+# => None
+
+logger.log("Connection instable", "warning")
+logger.log("Connection lost", "error")
+
+print(logger.show_last())
+# => Connection lost
+print(logger.show_last("info"))
+# => System started
+```
+
+----
