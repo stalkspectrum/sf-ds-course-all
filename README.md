@@ -42,3 +42,5 @@ choropleth, scatter_3d)*
 [3.12. Задачи модуля PYTHON-14](01-17-PYTHON-14)&nbsp;&mdash; Очистка данных    
 [3.13. Задачи модуля PYTHON-15](01-18-PYTHON-15)&nbsp;&mdash; Принципы ООП
 *(Классы, try-except-else-finally)*    
+[3.14. Задачи модуля PYTHON-16](02-20-PYTHON-16)&nbsp;&mdash; Выгрузка данных из
+разных форматов *(CSV, Excel, JSON)*    
