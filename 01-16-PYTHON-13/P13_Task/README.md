@@ -94,7 +94,10 @@
 
 ### Результат ###
 
-Empty
+График задания 9.9 создан в Plotly и не отображается в файлах Jupyter Notebook.    
+Поэтому, если он не виден ниже:    
+![Plotly Graph](https://ssszone.ru/DataScience/p13/plot99.html)    
+то его можно отдельно [увидеть в браузере по ссылке](https://ssszone.ru/DataScience/p13/plot99.html)
 
 [:arrow_up: Содержание](#содержание)
 
