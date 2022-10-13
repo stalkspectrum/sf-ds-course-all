@@ -46,3 +46,4 @@ choropleth, scatter_3d)*
 разных форматов *(CSV, Excel, JSON)*    
 [3.15. Задачи модуля PYTHON-17](02-21-PYTHON-17)&nbsp;&mdash; Выгрузка данных по
 сети и API    
+[3.16. Задачи модуля SQL-1](02-23-SQL-1)&nbsp;&mdash; Основы запросов SQL    

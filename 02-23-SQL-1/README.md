@@ -38,3 +38,14 @@ SELECT director, movie_title, rating * 10 AS rating_100 FROM sql.kinopoisk
 ```
 
 ----
+
+#### **Задание 2.1** ####
+
+Написать запрос, чтобы вывести все столбцы для фильмов, которые вышли в прокат в
+1999 году.
+
+```sql
+SELECT * FROM sql.kinopoisk WHERE year = 1999
+```
+
+----
