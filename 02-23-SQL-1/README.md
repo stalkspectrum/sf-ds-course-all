@@ -6,7 +6,8 @@
 фильма, годом его выпуска и рейтингом.
 
 ```sql
-SELECT movie_title, year, rating FROM sql.kinopoisk
+SELECT movie_title, year, rating
+FROM sql.kinopoisk
 ```
 
 ----
@@ -20,7 +21,8 @@ SELECT movie_title, year, rating FROM sql.kinopoisk
 - разница между максимально возможным рейтингом (10) и рейтингом этого фильма.
 
 ```sql
-SELECT director, movie_title, 10 - rating FROM sql.kinopoisk
+SELECT director, movie_title, 10 - rating
+FROM sql.kinopoisk
 ```
 
 ----
@@ -34,7 +36,8 @@ SELECT director, movie_title, 10 - rating FROM sql.kinopoisk
 на 10.
 
 ```sql
-SELECT director, movie_title, rating * 10 AS rating_100 FROM sql.kinopoisk
+SELECT director, movie_title, rating * 10 AS rating_100
+FROM sql.kinopoisk
 ```
 
 ----
@@ -45,7 +48,22 @@ SELECT director, movie_title, rating * 10 AS rating_100 FROM sql.kinopoisk
 1999 году.
 
 ```sql
-SELECT * FROM sql.kinopoisk WHERE year = 1999
+SELECT *
+FROM sql.kinopoisk
+WHERE year = 1999
+```
+
+----
+
+#### **Задание 2.2** ####
+
+Написать запрос, который выведет столбцы с именем режиссёра и названием фильмов,
+у которых рейтинг больше или равен 8.5.
+
+```sql
+SELECT director, movie_title
+FROM sql.kinopoisk
+WHERE rating >= 8.5
 ```
 
 ----
