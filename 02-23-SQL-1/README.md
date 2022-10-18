@@ -1,6 +1,7 @@
 ## Задачи из юнитов модуля SQL-1 (Основы SQL) ##
 
 ----
+
 ### Схема базы sql.kinopoisk ###
 
       position (Position)           номер в базе данных
@@ -203,26 +204,39 @@ OFFSET 19 LIMIT 28
 
 ```sql
 SELECT
-    movie_title AS "Название фильма",
-    director AS "Режиссёр",
-    screenwriter AS "Сценарист",
-    actors AS "Актёры"
+      movie_title AS "Название фильма",
+      director AS "Режиссёр",
+      screenwriter AS "Сценарист",
+      actors AS "Актёры"
 FROM sql.kinopoisk
 WHERE
-    (
-        (
+      (
             (
-                (rating BETWEEN 8 AND 8.5
-                )
-                OR year < 1990
+                  (
+                        (rating BETWEEN 8 AND 8.5
+                        )
+                        OR year < 1990
+                  )
+                  AND overview IS NOT NULL
             )
-            AND overview IS NOT NULL
-        )
-        AND movie_title NOT LIKE 'Т%'
-    )
-    AND movie_title LIKE '____________'
+            AND movie_title NOT LIKE 'Т%'
+      )
+      AND movie_title LIKE '____________'
 ORDER BY rating DESC
 LIMIT 7
 ```
+
+----
+
+### Схема базы sql.pokemon ###
+
+      id (ID)           уникальный идентификатор
+      name (Name)       имя
+      type1 (Type1)     основной тип
+      type2 (TyPe2)    дополнительный тип
+      hp (Hp)           количество очков здоровья
+      attack (Attack)   показатели атаки
+      defense (Defense) показатели защиты
+      speed (Speed)     показатели скорости
 
 ----
