@@ -46,4 +46,7 @@ choropleth, scatter_3d)*
 разных форматов *(CSV, Excel, JSON)*    
 [3.15. Задачи модуля PYTHON-17](02-21-PYTHON-17)&nbsp;&mdash; Выгрузка данных по
 сети и API    
-[3.16. Задачи модуля SQL-1](02-23-SQL-1)&nbsp;&mdash; Основы запросов SQL    
+[3.16. Задачи модуля SQL-1](02-23-SQL-1)&nbsp;&mdash; Основы запросов SQL
+*(SELECT, FROM, ORDER BY, WHERE, LIKE, LIMIT)*    
+[3.17. Задачи модуля SQL-2](02-24-SQL-2)&nbsp;&mdash; Агрегатные функции и
+группировка в SQL *(DISTINCT, SUM(), AVG(), MIN(), MAX(), GROUP BY)*    
