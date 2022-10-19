@@ -49,4 +49,4 @@ choropleth, scatter_3d)*
 [3.16. Задачи модуля SQL-1](02-23-SQL-1)&nbsp;&mdash; Основы запросов SQL
 *(SELECT, FROM, ORDER BY, WHERE, LIKE, LIMIT)*    
 [3.17. Задачи модуля SQL-2](02-24-SQL-2)&nbsp;&mdash; Агрегатные функции и
-группировка в SQL *(DISTINCT, SUM(), AVG(), MIN(), MAX(), GROUP BY)*    
+группировка в SQL *(DISTINCT, SUM(), AVG(), MIN(), MAX(), GROUP BY, HAVING)*    

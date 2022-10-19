@@ -33,10 +33,14 @@ SELECT
 FROM sql.pokemon
 WHERE
     type1 = 'Electric'
-        AND type2 IS NOT NULL
-        AND (attack > 50
-                OR defense > 50
-            )
+    AND
+    type2 IS NOT NULL
+    AND
+    (
+        attack > 50
+        OR
+        defense > 50
+    )
 ```
 
 ----
@@ -66,6 +70,29 @@ FROM sql.pokemon
 GROUP BY primary_type
 ORDER BY additional_types_count DESC,
          primary_type
+```
+
+----
+
+#### **Задание 5.1** ####
+
+Написать запрос, который выведет основной и дополнительный типы покемонов
+(столбцы `primary_type` и `additional_type`) для тех типов, у которых средний
+показатель атаки больше **100** и максимальный показатель очков здоровья меньше
+**80**.
+
+```sql
+SELECT
+    type1 AS primary_type,
+    type2 AS additional_type
+FROM sql.pokemon
+GROUP BY primary_type, additional_type
+HAVING
+    (
+        AVG(attack) > 100
+        AND
+        MAX(hp) < 80
+    )
 ```
 
 ----
