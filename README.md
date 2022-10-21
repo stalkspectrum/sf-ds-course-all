@@ -50,3 +50,4 @@ choropleth, scatter_3d)*
 *(SELECT, FROM, ORDER BY, WHERE, LIKE, LIMIT)*    
 [3.17. Задачи модуля SQL-2](02-24-SQL-2)&nbsp;&mdash; Агрегатные функции и
 группировка в SQL *(DISTINCT, SUM(), AVG(), MIN(), MAX(), GROUP BY, HAVING)*    
+[3.18. Задачи модуля SQL-3](02-25-SQL-3)&nbsp;&mdash; Соединение таблиц *()*    
