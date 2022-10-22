@@ -131,3 +131,24 @@ ORDER BY m.id
 ```
 
 ----
+
+#### **Задание 4.1** ####
+
+Написать запрос, который выведет полное название команды (`long_name`),
+количество голов домашней команды (`home_goal`) и количество голов гостевой
+команды (`away_goal`) в матчах, где домашней командой были команды с коротким
+названием **`GEN`**.    
+Отсортировать запрос по **id** матча в порядке возрастания.
+
+```sql
+SELECT
+    t.long_name,
+    m.home_team_goals AS home_goal,
+    m.away_team_goals AS away_goal
+FROM sql.teams AS t
+JOIN sql.matches AS m ON m.home_team_api_id = t.api_id
+WHERE t.short_name = 'GEN'
+ORDER BY m.id
+```
+
+----
