@@ -74,3 +74,23 @@ WHERE away_team_api_id = api_id
 ```
 
 ----
+
+#### **Задание 3.1** ####
+
+Переписать запрос:
+
+```text
+SELECT *
+FROM sql.teams, sql.matches
+WHERE away_team_api_id = api_id
+```
+
+с использованием **`JOIN`**.
+
+```sql
+SELECT *
+FROM sql.teams
+JOIN sql.matches ON away_team_api_id = api_id
+```
+
+----
