@@ -211,16 +211,16 @@ SELECT
 FROM sql.kinopoisk
 WHERE
     (
-        (
-            (
-                (rating BETWEEN 8 AND 8.5)
-                OR year < 1990
-            )
-            AND overview IS NOT NULL
-        )
-        AND movie_title NOT LIKE 'Т%'
+        (rating BETWEEN 8 AND 8.5)
+        OR
+        year < 1990
     )
-    AND movie_title LIKE '____________'
+    AND
+    overview IS NOT NULL
+    AND
+    movie_title NOT LIKE 'Т%'
+    AND
+    movie_title LIKE '____________'
 ORDER BY rating DESC
 LIMIT 7
 ```
