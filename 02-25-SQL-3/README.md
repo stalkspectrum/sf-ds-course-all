@@ -181,3 +181,21 @@ ORDER BY m.id
 ```
 
 ----
+
+#### **Задание 4.3** ####
+
+Написать запрос, с помощью которого можно вывести список полных названий команд,
+сыгравших в гостях **150** и более матчей.    
+Отсортировать список по названию команды.
+
+```sql
+SELECT
+    t.long_name
+FROM sql.matches AS m
+JOIN sql.teams AS t ON t.api_id = m.away_team_api_id
+GROUP BY t.long_name
+HAVING COUNT(t.api_id = m.away_team_api_id) > 149
+ORDER BY t.long_name
+```
+
+----
