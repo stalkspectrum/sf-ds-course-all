@@ -191,9 +191,9 @@ ORDER BY m.id
 ```sql
 SELECT
     t.long_name
-FROM sql.matches AS m
-JOIN sql.teams AS t ON t.api_id = m.away_team_api_id
-GROUP BY t.long_name
+FROM sql.teams AS t
+JOIN sql.matches AS m ON t.api_id = m.away_team_api_id
+GROUP BY t.id
 HAVING COUNT(t.api_id = m.away_team_api_id) > 149
 ORDER BY t.long_name
 ```
