@@ -299,7 +299,27 @@ JOIN sql.matches AS m ON
 GROUP BY t.long_name
 ```
 
+----
+
 #### **Задание 6.3** ####
+
+Написать запрос, который выведет топ-10 команд (`long_name`) по суммарному
+количеству забитых голов в гостевых матчах. Во втором столбце запроса вывести
+суммарное количество голов в гостевых матчах (`total_goals`).
+
+```sql
+SELECT
+    t.long_name,
+    SUM(m.away_team_goals) AS total_goals
+FROM sql.teams AS t
+JOIN sql.matches AS m ON
+    t.api_id = m.away_team_api_id
+GROUP BY t.long_name
+ORDER BY total_goals DESC
+LIMIT 10
+```
+
+----
 
 #### **Задание 6.4** ####
 
