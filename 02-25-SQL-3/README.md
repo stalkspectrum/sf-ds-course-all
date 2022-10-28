@@ -238,7 +238,7 @@ LEFT JOIN sql.matches AS m ON
     OR
     t.api_id = m.away_team_api_id
 GROUP BY t.id
-ORDER BY COUNT(m.id), t.long_name
+ORDER BY matches_cnt, t.long_name
 ```
 
 ----
@@ -251,6 +251,13 @@ ORDER BY COUNT(m.id), t.long_name
 Отсортировать запрос по первому и второму столбцам.
 
 ```sql
+SELECT
+    DISTINCT
+        t1.short_name AS home_team,
+        t2.short_name AS away_team
+FROM sql.teams AS t1
+CROSS JOIN sql.teams AS t2
+ORDER BY home_team, away_team
 ```
 
 ----
