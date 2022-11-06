@@ -167,6 +167,15 @@ ORDER BY object_name
 городов и штатов. Результатом запроса должен быть один столбец `object_name`,
 отсортированный в алфавитном порядке.
 
+```sql
+SELECT city_name AS object_name
+FROM sql.city
+UNION
+SELECT state
+FROM sql.city
+ORDER BY object_name
+```
+
 ----
 
 #### **Задание 3.1** ####
