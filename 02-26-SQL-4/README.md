@@ -118,6 +118,25 @@ LIMIT 1
 
 ```sql
 SELECT
+    city_name AS object_name,
+    'city' AS object_type
+FROM sql.city
+UNION
+SELECT
+    state,
+    'state'
+FROM sql.city
+UNION
+SELECT
+    first_name,
+    'driver'
+FROM sql.driver
+UNION
+SELECT
+    make,
+    'truck'
+FROM sql.truck
+ORDER BY object_name, object_type
 ```
 
 ----
