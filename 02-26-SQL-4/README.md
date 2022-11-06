@@ -187,6 +187,21 @@ ORDER BY object_name
 Отсортировать список по столбцу с контактными данными в порядке возрастания, а
 затем&nbsp;&mdash; по имени водителя.
 
+```sql
+SELECT
+    zip_code::text AS contact,
+    first_name,
+    'zip' AS contact_type
+FROM sql.driver
+UNION ALL
+SELECT
+    phone::text,
+    first_name,
+    'phone'
+FROM sql.driver
+ORDER BY contact, first_name
+```
+
 ----
 
 #### **Задание 4.1** ####
