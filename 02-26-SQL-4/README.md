@@ -246,24 +246,6 @@ ORDER BY date_period DESC
 
 ----
 
-----
-
-----
-
-----
-
-----
-
-----
-
-----
-
-----
-
-----
-
-----
-
 #### **Задание 5.1** ####
 
 Написать запрос, который выведет все города и штаты, в которых они расположены,
@@ -687,6 +669,15 @@ UNION ALL
 Отсортировать по возрастанию.
 
 ```sql
+SELECT cust_id AS mutual_id
+FROM sql.customer
+
+INTERSECT
+
+SELECT ship_id
+FROM sql.shipment
+
+ORDER BY mutual_id
 ```
 
 ----
