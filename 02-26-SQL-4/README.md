@@ -121,21 +121,28 @@ SELECT
     city_name AS object_name,
     'city' AS object_type
 FROM sql.city
+
 UNION
+
 SELECT
     state,
     'state'
 FROM sql.city
+
 UNION
+
 SELECT
     first_name,
     'driver'
 FROM sql.driver
+
 UNION
+
 SELECT
     make,
     'truck'
 FROM sql.truck
+
 ORDER BY object_name, object_type
 ```
 
@@ -150,9 +157,12 @@ ORDER BY object_name, object_type
 ```sql
 SELECT city_name AS object_name
 FROM sql.city
+
 UNION ALL
+
 SELECT state
 FROM sql.city
+
 ORDER BY object_name
 ```
 
@@ -170,9 +180,12 @@ ORDER BY object_name
 ```sql
 SELECT city_name AS object_name
 FROM sql.city
+
 UNION
+
 SELECT state
 FROM sql.city
+
 ORDER BY object_name
 ```
 
@@ -193,12 +206,15 @@ SELECT
     first_name,
     'zip' AS contact_type
 FROM sql.driver
+
 UNION ALL
+
 SELECT
     phone::text,
     first_name,
     'phone'
 FROM sql.driver
+
 ORDER BY contact, first_name
 ```
 
@@ -210,6 +226,41 @@ ORDER BY contact, first_name
 количество доставок в каждый день. Необходимые столбцы: `date_period`,
 `cnt_shipment`. Не забыть о единой типизации. Упорядочить по убыванию столбца
 `date_period`.
+
+```sql
+SELECT
+    s.ship_date::text AS date_period,
+    COUNT(*) AS cnt_shipment
+FROM sql.shipment AS s
+GROUP BY s.ship_date
+
+UNION ALL
+
+SELECT
+    'total_shipments',
+    COUNT(*)
+FROM sql.shipment
+
+ORDER BY date_period DESC
+```
+
+----
+
+----
+
+----
+
+----
+
+----
+
+----
+
+----
+
+----
+
+----
 
 ----
 
@@ -223,6 +274,48 @@ ORDER BY contact, first_name
 
 Столбцы к выводу: `city_name`, `state`, `shipping_status`.    
 Отсортировать в алфавитном порядке по городу, а затем&nbsp;&mdash; по штату.
+
+```sql
+SELECT
+    c.city_name AS city_name,
+    c.state AS state,
+    'доставка осуществлялась' AS shipping_status
+FROM sql.city AS c
+LEFT JOIN sql.shipment AS s ON c.city_id = s.city_id
+GROUP BY c.city_id
+HAVING COUNT(s.ship_id) > 0
+
+UNION ALL
+
+SELECT
+    cc.city_name,
+    cc.state,
+    'доставка не осуществлялась'
+FROM sql.city AS cc
+LEFT JOIN sql.shipment AS ss ON cc.city_id = ss.city_id
+GROUP BY cc.city_id
+HAVING COUNT(ss.ship_id) = 0
+
+ORDER BY city_name, state
+```
+
+----
+
+----
+
+----
+
+----
+
+----
+
+----
+
+----
+
+----
+
+----
 
 ----
 
@@ -239,6 +332,46 @@ ORDER BY contact, first_name
 Отсортировать по убыванию получившегося &laquo;нечестного&raquo; количества
 доставок, а затем&nbsp;&mdash; по имени в алфавитном порядке.
 
+```sql
+SELECT
+    c.city_name AS city_name,
+    COUNT(s.ship_id) AS shippings_fake
+FROM sql.city AS c
+JOIN sql.shipment AS s ON c.city_id = s.city_id
+GROUP BY c.city_id
+HAVING COUNT(s.ship_id) > 10
+
+UNION ALL
+
+SELECT
+    cc.city_name,
+    COUNT(ss.ship_id) + 5
+FROM sql.city AS cc
+JOIN sql.shipment AS ss ON cc.city_id = ss.city_id
+GROUP BY cc.city_id
+HAVING COUNT(ss.ship_id) <= 10
+
+ORDER BY shippings_fake DESC, city_name
+```
+
+----
+
+----
+
+----
+
+----
+
+----
+
+----
+
+----
+
+----
+
+----
+
 ----
 
 #### **Задание 6.1** ####
@@ -254,13 +387,45 @@ ORDER BY contact, first_name
 
 Столбец с результатом назвать `result`.
 
+```sql
+SELECT MAX(num) AS result
+FROM
+(
+    SELECT 1000000 as num
+    UNION
+    SELECT 541
+    UNION
+    SELECT -500
+    UNION
+    SELECT 100
+) AS n
+```
+
+----
+
+----
+
+----
+
+----
+
+----
+
+----
+
+----
+
+----
+
+----
+
 ----
 
 #### **Задание 6.2** ####
 
 Сортировка для числовых и строковых типов данных отличается. Построив запрос по
-аналогии с примером, привести значения к текстовому типу данных, сравнить и
-выбрать наибольшее из них:
+аналогии с предыдущим примером, привести значения к текстовому типу данных,
+сравнить и выбрать наибольшее из них:
 
 ```text
 1000000;
@@ -271,12 +436,44 @@ ORDER BY contact, first_name
 
 Столбец с ответом назвать `mycol`
 
+```sql
+SELECT MAX(dig) AS mycol
+FROM
+(
+    SELECT '1000000' AS dig
+    UNION
+    SELECT '541'
+    UNION
+    SELECT '-500'
+    UNION
+    SELECT '100'
+) AS t
+```
+
+----
+
+----
+
+----
+
+----
+
+----
+
+----
+
+----
+
+----
+
+----
+
 ----
 
 #### **Задание 6.3** ####
 
-Построив запрос по аналогии с примером, найти самое большое значение из
-перечисленных операторов:
+Построив запрос по аналогии с предыдущим примером, найти самое большое значение
+из перечисленных операторов:
 
 ```text
 + ;
@@ -286,5 +483,241 @@ ORDER BY contact, first_name
 ```
 
 Столбец с ответом назвать `result`.
+
+```sql
+SELECT MAX(sign) AS result
+FROM
+(
+    SELECT '+' AS sign
+    UNION SELECT '-'
+    UNION SELECT '='
+    UNION SELECT '/'
+) AS s
+```
+
+----
+
+----
+
+----
+
+----
+
+----
+
+----
+
+----
+
+----
+
+----
+
+----
+
+#### **Задание 7.1** ####
+
+Вывести список zip-кодов, которые есть в таблице `sql.driver`, но отсутствуют в
+таблице `sql.customer`.    
+Отсортировать по возрастанию, столбец к выводу&nbsp;&mdash; `zip`.
+
+```sql
+SELECT d.zip_code AS zip
+FROM sql.driver AS d
+
+EXCEPT
+
+SELECT c.zip
+FROM sql.customer AS c
+
+ORDER BY 1
+```
+
+----
+
+----
+
+----
+
+----
+
+----
+
+----
+
+----
+
+----
+
+----
+
+----
+
+#### **Задание 8.1** ####
+
+Написать запрос, который выведет список `id` городов, в которых есть и
+клиенты, и доставки, и водители.
+
+```sql
+SELECT c.city_id AS id
+FROM sql.customer AS c
+
+INTERSECT
+
+SELECT s.city_id
+FROM sql.shipment AS s
+
+INTERSECT
+
+SELECT d.city_id
+FROM sql.driver AS d
+```
+
+----
+
+----
+
+----
+
+----
+
+----
+
+----
+
+----
+
+----
+
+----
+
+----
+
+#### **Задание 8.2** ####
+
+Вывести zip-код, который есть как в таблице с клиентами, так и в таблице с
+водителями.
+
+```sql
+SELECT c.zip AS zip
+FROM sql.customer AS c
+
+INTERSECT
+
+SELECT d.zip_code
+FROM sql.driver AS d
+```
+
+----
+
+----
+
+----
+
+----
+
+----
+
+----
+
+----
+
+----
+
+----
+
+----
+
+#### **Задание 9.1** ####
+
+Вывести города с максимальным и минимальным весом единичной доставки. Столбцы к
+выводу&nbsp;&mdash; `city_name`, `weight`.
+
+```sql
+(
+    SELECT
+        c.city_name AS city_name,
+        MAX(s.weight) AS weight
+    FROM sql.shipment AS s
+    JOIN sql.city AS c ON c.city_id = s.city_id
+    GROUP BY c.city_name
+    ORDER BY weight DESC
+    LIMIT 1
+)
+
+UNION ALL
+
+(
+    SELECT
+        cc.city_name,
+        MIN(ss.weight)
+    FROM sql.shipment AS ss
+    JOIN sql.city AS cc ON cc.city_id = ss.city_id
+    GROUP BY cc.city_name
+    ORDER BY MIN(ss.weight)
+    LIMIT 1
+)
+```
+
+----
+
+----
+
+----
+
+----
+
+----
+
+----
+
+----
+
+----
+
+----
+
+----
+
+#### **Задание 9.2** ####
+
+Вывести идентификационные номера клиентов (`cust_id`), которые совпадают с
+идентификационными номерами доставок (`ship_id`). Столбец к выводу&nbsp;&mdash;
+`mutual_id`.    
+Отсортировать по возрастанию.
+
+```sql
+```
+
+----
+
+----
+
+----
+
+----
+
+----
+
+----
+
+----
+
+----
+
+----
+
+----
+
+#### **Задание 9.3** ####
+
+Создать справочник, содержащий уникальные имена клиентов, которые являются
+производителями (`cust_type='manufacturer'`), и производителей грузовиков, а
+также описание объекта&nbsp;&mdash; **`КЛИЕНТ`** или **`ГРУЗОВИК`**. Столбцы к
+выводу&nbsp;&mdash; `object_name`, `object_description`.    
+Отсортировать по названию в алфавитном порядке.
+
+```sql
+```
 
 ----
