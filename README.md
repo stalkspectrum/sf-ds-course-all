@@ -55,3 +55,4 @@ choropleth, scatter_3d)*
 *(JOIN, LEFT/RIGHT JOIN, FULL OUTER JOIN, CROSS JOIN, NATURAL JOIN)*    
 [3.19. Задачи модуля SQL-4](02-26-SQL-4)&nbsp;&mdash; Сложные объединения
 *(UNION, EXCEPT, INTERSECT)*    
+[3.20. Задачи модуля SQL-5](02-27-SQL-5)&nbsp;&mdash; Типы данных *()*
