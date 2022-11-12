@@ -76,7 +76,7 @@
 ![employers table](employers.png)    
 Таблица-справочник со списком работодателей.    
 
-#### timetable_type ####
+#### industries ####
 
 ![industries table](industries.png)    
 Таблица-справочник вариантов сфер деятельности работодателей.    
