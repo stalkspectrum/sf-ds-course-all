@@ -49,7 +49,7 @@ choropleth, scatter_3d)*
 сети и API    
 [3.16. Задачи модуля SQL-1](02-23-SQL-1)&nbsp;&mdash; Основы запросов SQL
 *(SELECT, FROM, ORDER BY, WHERE, LIKE, LIMIT)*    
-[3.17. Задачи модуля SQL-2](02-24-SQL-2)&nbsp;&mdash; Агрегатные функции и
+[3.17. Задачи модуля SQL-2](02-25-SQL-2)&nbsp;&mdash; Агрегатные функции и
 группировка в SQL *(DISTINCT, SUM(), AVG(), MIN(), MAX(), GROUP BY, HAVING)*    
 [3.18. Задачи модуля SQL-3](02-26-SQL-3)&nbsp;&mdash; Соединение таблиц
 *(JOIN, LEFT/RIGHT JOIN, FULL OUTER JOIN, CROSS JOIN, NATURAL JOIN)*    
