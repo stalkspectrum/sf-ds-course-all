@@ -45,7 +45,7 @@ choropleth, scatter_3d)*
 *(Классы, try-except-else-finally)*    
 [3.14. Задачи модуля PYTHON-16](02-20-PYTHON-16)&nbsp;&mdash; Выгрузка данных из
 разных форматов *(CSV, Excel, JSON)*    
-[3.15. Задачи модуля PYTHON-17](02-21-PYTHON-17)&nbsp;&mdash; Выгрузка данных по
+[3.15. Задачи модуля PYTHON-17](02-22-PYTHON-17)&nbsp;&mdash; Выгрузка данных по
 сети и API    
 [3.16. Задачи модуля SQL-1](02-24-SQL-1)&nbsp;&mdash; Основы запросов SQL
 *(SELECT, FROM, ORDER BY, WHERE, LIKE, LIMIT)*    
