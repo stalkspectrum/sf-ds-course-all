@@ -112,6 +112,13 @@ FROM x
 года), `month_n` (номер месяца), `qty` (количество доставок).
 
 ```sql
+SELECT
+    EXTRACT(YEAR FROM ship_date) AS year_n,
+    EXTRACT(MONTH FROM ship_date) AS month_n,
+    COUNT(*) AS qty
+FROM sql.shipment
+GROUP BY year_n, month_n
+ORDER BY year_n, month_n
 ```
 
 ----
