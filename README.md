@@ -56,4 +56,4 @@ choropleth, scatter_3d)*
 [3.19. Задачи модуля SQL-4](02-27-SQL-4)&nbsp;&mdash; Сложные объединения
 *(UNION, EXCEPT, INTERSECT)*    
 [3.20. Задачи модуля SQL-5](02-28-SQL-5)&nbsp;&mdash; Типы данных
-*(NOW(), TIMESTAMP WITH TIME ZONE, EXTRACT(), TO_CHAR())*
+*(TIMESTAMP WITH TIME ZONE, NOW(), EXTRACT(), TO_CHAR(), DATE_TRUNC())*
