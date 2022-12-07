@@ -95,9 +95,9 @@ select '2018-12-31 21:00:00+00'::timestamp with time zone ts
 выдаче: `dt_msk` (дата в московском часовом поясе), `dt_utc` (дата в UTC).
 
 ```sql
-WITH x AS (SELECT '2018-12-31 21:00:00+00'::timestamp with time zone AS ts)
+WITH x AS (SELECT '2018-12-31 21:00:00+00'::timestamp WITH TIME ZONE AS ts)
 SELECT
-    (ts AT time zone 'Europe/Moscow')::date AS dt_msk,
+    (ts AT TIME ZONE 'Europe/Moscow')::date AS dt_msk,
     ts::date AS dt_utc
 FROM x
 ```
@@ -119,6 +119,24 @@ SELECT
 FROM sql.shipment
 GROUP BY year_n, month_n
 ORDER BY year_n, month_n
+```
+
+----
+
+#### **Задание 4.2** ####
+
+Вывести текст текущего времени для сервиса точного времени.
+Написать запрос, который выводит текст "Точное время x часов y минут z секунд"
+(текст в кавычки заключать не нужно), где `x`, `y`, `z`&nbsp;&mdash; часы,
+минуты и секунды соответственно, при условии, что сообщение нужно вывести для
+московского часового пояса. Время введите в 24-часовом формате. Столбцы в
+выдаче: `msg (сообщение)`.
+
+```sql
+SELECT
+    TO_CHAR(
+        NOW() AT TIME ZONE 'Europe/Moscow', 'Точное время HH24 часов MI минут SS секунд'
+    ) AS "msg (сообщение)"
 ```
 
 ----
