@@ -13,5 +13,4 @@ VENV/
 03-31-EDA-1/data/wine.csv
 03-32-EDA-2/data/wine_cleared.csv
 03-33-EDA-3/data/wine_cleared.csv
-# 03-35-EDA-5/data/ab_data.csv
 03-35-EDA-5/data/*.csv
