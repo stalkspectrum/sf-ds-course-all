@@ -14,3 +14,4 @@ VENV/
 03-35-EDA-5/data/*.csv
 03-35-EDA-5/E5_Task/*.csv
 03-36-EDA-6/data/*.csv
+03-36-EDA-6/E6_Task/creds.py
