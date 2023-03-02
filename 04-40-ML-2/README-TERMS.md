@@ -11,3 +11,45 @@
 - **Ансамблевые методы**: композиции из методов (бэггинг, стекинг, бустинг).
 
 ----
+
+**Регрессия**&nbsp;&mdash; класс задач обучения с учителем, когда по
+определённому набору признаков объекта необходимо предсказать числовую целевую
+переменную.
+
+**Линейная регрессия (Linear Regression)**&nbsp;&mdash; одна из простейших
+моделей для решения задачи регрессии. Главная гипотеза состоит в том, что
+рассматриваемая зависимость является линейной.
+
+Общий вид модели в случае, когда целевая переменная зависит от $m$ факторов,
+будет иметь следующий вид:
+$$\widehat{y}=w_0+\displaystyle\sum_{i=1}^mw_ix_i$$
+в однофакторном случае всё просто (обычное уравнение прямой):
+$\widehat{y}=w_0+w_1x$ ($w_i$&nbsp;&mdash; **параметры линейной регрессии**).
+
+----
+
+**Метрика**&nbsp;&mdash; численное выражение качества моделирования.
+
+Самые распространённые метрики:    
+**MAE (Mean Absolute Error)&nbsp;&mdash; `sklearn.metrics.mean_absolute_error()`**
+$$MAE=\frac{1}{n}\displaystyle\sum_{i=1}^n|y_i-\widehat{y_i}|$$
+**MAPE (Mean Absolute Percent Error)&nbsp;&mdash; `sklearn.metrics.mean_absolute_percentage_error() * 100`**
+$$MAPE=\frac{100\%}{n}\displaystyle\sum_{i=1}^n\frac{|y_i-\widehat{y_i}|}{|y_i|}$$
+**MSE (Mean Squared Error)&nbsp;&mdash; `sklearn.metrics.mean_squared_error()`**
+$$MSE=\frac{1}{n}\displaystyle\sum_{i=1}^n(y_i-\widehat{y_i})^2$$
+**RMSE (Root Mean Squared Error)**
+$$RMSE=\sqrt{MSE}=\sqrt{\frac{1}{n}\displaystyle\sum_{i=1}^n(y_i-\widehat{y_i})^2}$$
+**Коэффициент детерминации ($R^2$)&nbsp;&mdash; `sklearn.metrics.r2_score()`**    
+$R^2$ описывает, какую долю информации о зависимости (дисперсии) смогла уловить
+модель. Удовлетворительным $R^2$ считается показатель выше 0.5: чем ближе к 1,
+тем лучше. Отрицательные значения говорят о том, что построенная модель
+настолько плоха, что лучше было бы присвоить всем ответам среднее значение.
+$$R^2=1-\frac{MSE}{MSE_{mean}}$$
+$$MSE_{mean}=\frac{1}{n}\displaystyle\sum_{i=1}^n(y_i-\bar{y_i})^2$$
+где:    
+$y$&nbsp;&mdash; истинные ответы,    
+$\widehat{y}$&nbsp;&mdash; предсказания,    
+$\bar{y}$&nbsp;&mdash; среднее по вектору правильных ответов,    
+$n$&nbsp;&mdash; количество примеров.
+
+----
