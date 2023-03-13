@@ -62,3 +62,5 @@ choropleth, scatter_3d)*
 [3.20. Задачи модуля SQL-5](02-28-SQL-5)&nbsp;&mdash; Типы данных
 *(TIMESTAMP WITH TIME ZONE, NOW(), EXTRACT(), TO_CHAR(), DATE_TRUNC(), UPPER(),
 LOWER(), REPLACE(), LEFT(), RIGHT(), FORMAT())*    
+[3.21. Задачи модуля EDA-1](03-31-EDA-1)&nbsp;&mdash; Алгоритмы и методы
+*(EDA-однострочники)*
