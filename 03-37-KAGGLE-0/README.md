@@ -33,11 +33,11 @@
 
 ### Файлы датасета ###
 
-- **`train_data.csv`**&nbsp;&mdash; обучающая выборка
-- **`test_data.csv`**&nbsp;&mdash; данные, на которых надо делать предсказание.
-Не содержат в себе целевую переменную `final_price`
-- **`sample_submission.csv`**&nbsp;&mdash; результирующий файл для
-**Submission**.
+- [**`train_data.csv`**](data/train_data.csv)&nbsp;&mdash; обучающая выборка
+- [**`test_data.csv`**](data/test_data.csv)&nbsp;&mdash; данные, на которых надо
+делать предсказание. Не содержат в себе целевую переменную `final_price`.
+- [**`sample_submission.csv`**](data/sample_submission.csv)&nbsp;&mdash;
+результирующий файл для **Submission**.
 
 ----
 
@@ -62,5 +62,7 @@
 ----
 
 ### Решение ###
+
+[module.ipynb](module.ipynb)&nbsp;&mdash; черновик для соревнований на Kaggle.
 
 ----
