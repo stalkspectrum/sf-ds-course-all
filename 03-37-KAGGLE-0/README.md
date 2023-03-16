@@ -33,11 +33,13 @@
 
 ### Файлы датасета ###
 
-- [**`train_data.csv`**](data/train_data.csv)&nbsp;&mdash; обучающая выборка
-- [**`test_data.csv`**](data/test_data.csv)&nbsp;&mdash; данные, на которых надо
-делать предсказание. Не содержат в себе целевую переменную `final_price`.
-- [**`sample_submission.csv`**](data/sample_submission.csv)&nbsp;&mdash;
-результирующий файл для **Submission**.
+[**`sf-dst-predict-car-price.zip`**](data/sf-dst-predict-car-price.zip)&nbsp;&mdash;
+архив с файлами:
+
+- **`train_data.csv`**&nbsp;&mdash; обучающая выборка
+- **`test_data.csv`**&nbsp;&mdash; данные, на которых надо делать предсказание.
+Не содержат в себе целевую переменную `final_price`.
+- **`sample_submission.csv`**&nbsp;&mdash; результирующий файл для Submission.
 
 ----
 
@@ -63,6 +65,8 @@
 
 ### Решение ###
 
-[module.ipynb](module.ipynb)&nbsp;&mdash; черновик для соревнований на Kaggle.
+- [**`module.ipynb`**](module.ipynb)&nbsp;&mdash; черновик для соревнований на Kaggle.
+- [**`output/sample_submission`**](output/sample_submission.csv)&nbsp;&mdash;
+submission-файл, участвующий в соревнованиях.
 
 ----
