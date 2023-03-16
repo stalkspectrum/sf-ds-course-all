@@ -2,7 +2,7 @@
 
 ## Predict car price (Предсказание стоимости подержанного автомобиля) ##
 
-[Ссылка на соревнование](https://www.kaggle.com/t/06d1ae348e4d448eb1f92e04e5e9eb91)
+[Ссылка на соревнование](https://www.kaggle.com/competitions/sf-dst-predict-car-price)
 
 ### Содержание ###
 
@@ -33,7 +33,7 @@
 
 ### Файлы датасета ###
 
-[**`sf-dst-predict-car-price.zip`**](data/sf-dst-predict-car-price.zip)&nbsp;&mdash;
+[**`data/sf-dst-predict-car-price.zip`**](data/sf-dst-predict-car-price.zip)&nbsp;&mdash;
 архив с файлами:
 
 - **`train_data.csv`**&nbsp;&mdash; обучающая выборка
