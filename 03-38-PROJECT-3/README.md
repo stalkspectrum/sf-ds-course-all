@@ -112,6 +112,7 @@ README к проекту). Оформление проекта на GitHub, GitL
 ### Результат ###
 
 [**`Project-3.ipynb`**](Project-3.ipynb)&nbsp;&mdash; Рабочий вариант решения.
+
 [**`output/submission.csv`**](output/submission.csv)&nbsp;&mdash; Файл
 предсказаний.
 
