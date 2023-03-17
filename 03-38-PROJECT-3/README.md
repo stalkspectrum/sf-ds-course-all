@@ -4,6 +4,8 @@
 
 [Ссылка на соревнование](https://www.kaggle.com/competitions/sf-booking)
 
+[Профиль на Kaggle&nbsp;&mdash; **Ded Wildfield**](https://www.kaggle.com/wildfielded)
+
 ### Содержание ###
 
 [1. Смоделированная ситуация](#смоделированная-ситуация)    
@@ -108,6 +110,10 @@ README к проекту). Оформление проекта на GitHub, GitL
 ----
 
 ### Результат ###
+
+[**`Project-3.ipynb`**](Project-3.ipynb)&nbsp;&mdash; Рабочий вариант решения.
+[**`output/submission.csv`**](output/submission.csv)&nbsp;&mdash; Файл
+предсказаний.
 
 [:arrow_up: Содержание](#содержание)
 
