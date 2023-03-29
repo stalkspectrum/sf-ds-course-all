@@ -111,7 +111,11 @@ README к проекту). Оформление проекта на GitHub, GitL
 
 ### Результат ###
 
-[**`Project-3.ipynb`**](Project-3.ipynb)&nbsp;&mdash; Рабочий вариант решения.
+[WF_BookingPro](https://www.kaggle.com/code/wildfielded/wf-bookingpro)&nbsp;&mdash;
+Notebook на Kaggle.com.
+
+[**`Project-3.ipynb`**](Project-3.ipynb)&nbsp;&mdash; Черновой (и более
+подробный) вариант решения.
 
 [**`output/submission.csv`**](output/submission.csv)&nbsp;&mdash; Файл
 предсказаний.
