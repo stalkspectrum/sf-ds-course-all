@@ -111,7 +111,7 @@ README к проекту). Оформление проекта на GitHub, GitL
 
 ### Результат ###
 
-[WF_BookingPro](https://www.kaggle.com/code/wildfielded/wf-bookingpro)&nbsp;&mdash;
+[**`WF_BookingPro`**](https://www.kaggle.com/code/wildfielded/wf-bookingpro)&nbsp;&mdash;
 Notebook на Kaggle.com.
 
 [**`Project-3.ipynb`**](Project-3.ipynb)&nbsp;&mdash; Черновой (и более
