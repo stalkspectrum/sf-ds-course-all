@@ -319,6 +319,8 @@ ORDER BY total_goals DESC
 LIMIT 10
 ```
 
+----
+
 #### **Задание 6.4** ####
 
 Вывести количество матчей между командами **Real Madrid CF** и **FC Barcelona**.
