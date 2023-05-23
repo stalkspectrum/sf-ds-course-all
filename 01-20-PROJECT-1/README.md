@@ -1,6 +1,6 @@
 <h2 align="center">:gb: Disclaimer</h2>
 
-:warning: This test task was performed for a company with predominantly
+:warning: This test project was performed for a company with predominantly
 Russian-speaking specialists. Therefore, all explanations, comments and other
 texts are provided exclusively in Russian.
 

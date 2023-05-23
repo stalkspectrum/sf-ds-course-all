@@ -1,6 +1,17 @@
+<h2 align="center">:gb: Disclaimer</h2>
+
+:warning: This test project was performed for a company with predominantly
+Russian-speaking specialists. Therefore, all explanations, comments and other
+texts are provided exclusively in Russian.
+
 # Анализ вакансий из HeadHunter #
 
 ## (Подгрузка новых данных, уточнение анализа) ##
+
+![Python](https://img.shields.io/badge/python-3670A0?style=plastic&logo=python&logoColor=ffdd54)
+![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=plastic&logo=pandas&logoColor=white)
+**`Psycopg2`**
+**`SQL`**
 
 ### Содержание ###
 
