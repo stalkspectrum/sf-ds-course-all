@@ -1,6 +1,20 @@
+<h2 align="center">:gb: Disclaimer</h2>
+
+:warning: This test task was performed for a company with predominantly
+Russian-speaking specialists. Therefore, all explanations, comments and other
+texts are provided exclusively in Russian.
+
+----
+
 # Анализ вакансий из HeadHunter #
 
 ## (Преобразование, исследование и очистка данных) ##
+
+![Python](https://img.shields.io/badge/python-3670A0?style=plastic&logo=python&logoColor=ffdd54)
+![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=plastic&logo=numpy&logoColor=white)
+![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=plastic&logo=pandas&logoColor=white)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=plastic&logo=Matplotlib&logoColor=black)
+**`Seaborn`**
 
 ### Содержание ###
 
