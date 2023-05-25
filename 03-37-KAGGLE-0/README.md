@@ -4,6 +4,8 @@
 Russian-speaking specialists. Therefore, all explanations, comments and other
 texts are provided exclusively in Russian.
 
+----
+
 # Соревнование на Kaggle #
 
 ![Kaggle](https://img.shields.io/badge/Kaggle-035a7d?style=plastic&logo=kaggle&logoColor=white)

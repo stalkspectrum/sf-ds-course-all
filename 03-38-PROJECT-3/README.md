@@ -1,3 +1,11 @@
+<h2 align="center">:gb: Disclaimer</h2>
+
+:warning: This test project was performed for a company with predominantly
+Russian-speaking specialists. Therefore, all explanations, comments and other
+texts are provided exclusively in Russian.
+
+----
+
 # Exploratory Data Analysis and Feature Engineering #
 
 ## (Соревнование на Kaggle) ##
@@ -5,6 +13,15 @@
 [Ссылка на соревнование](https://www.kaggle.com/competitions/sf-booking)
 
 [Профиль на Kaggle&nbsp;&mdash; **Ded Wildfield**](https://www.kaggle.com/wildfielded)
+
+![Kaggle](https://img.shields.io/badge/Kaggle-035a7d?style=plastic&logo=kaggle&logoColor=white)
+![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=plastic&logo=numpy&logoColor=white)
+![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=plastic&logo=pandas&logoColor=white)
+![SciPy](https://img.shields.io/badge/SciPy-%230C55A5.svg?style=plastic&logo=scipy&logoColor=%white)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=plastic&logo=scikit-learn&logoColor=white)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=plastic&logo=Matplotlib&logoColor=black)
+**`Seaborn`**
+**`NLTK`**
 
 ### Содержание ###
 

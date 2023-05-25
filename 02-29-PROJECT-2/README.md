@@ -4,6 +4,8 @@
 Russian-speaking specialists. Therefore, all explanations, comments and other
 texts are provided exclusively in Russian.
 
+----
+
 # Анализ вакансий из HeadHunter #
 
 ## (Подгрузка новых данных, уточнение анализа) ##
