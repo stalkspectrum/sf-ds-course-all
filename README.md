@@ -63,6 +63,7 @@ choropleth, scatter_3d)*
 *(TIMESTAMP WITH TIME ZONE, NOW(), EXTRACT(), TO_CHAR(), DATE_TRUNC(), UPPER(),
 LOWER(), REPLACE(), LEFT(), RIGHT(), FORMAT())*    
 [3.21. Задачи модуля EDA-1](03-31-EDA-1)&nbsp;&mdash; Алгоритмы и методы
-*(EDA-однострочники)*
+*(EDA-однострочники)*    
 [3.22. Задачи модуля EDA-2](03-32-EDA-2)&nbsp;&mdash; Математическая статистика
-*(корреляции Пирсона, Спирмена, Кендалла, Мэтьюса)*
+*(корреляции Пирсона, Спирмена, Кендалла, Мэтьюса)*    
+[3.23. Задачи модуля EDA-3](03-33-EDA-3)&nbsp;&mdash;
