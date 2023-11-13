@@ -6,9 +6,9 @@
 
 #### 1. Проекты ####
 
-[1.1. Анализ вакансий из HeadHunter](01-20-PROJECT-1)    
-[1.2. Подгрузка новых данных с HeadHunter, уточнение анализа](02-29-PROJECT-2)    
-[1.3. Exploratory Data Analysis and Feature Engineering](03-38-PROJECT-3)    
+[01.20. Анализ вакансий из HeadHunter](01-20-PROJECT-1)    
+[02.29. Подгрузка новых данных с HeadHunter, уточнение анализа](02-29-PROJECT-2)    
+[03.38. Exploratory Data Analysis and Feature Engineering](03-38-PROJECT-3)    
 
 #### 2. Финальные задания модулей ####
 
