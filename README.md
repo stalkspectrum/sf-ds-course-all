@@ -82,3 +82,4 @@ LOWER(), REPLACE(), LEFT(), RIGHT(), FORMAT())*
 
 
 Проверка связи
+Ghjdthrf 2
